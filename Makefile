@@ -1,6 +1,12 @@
 SHELL := /bin/bash
 .DEFAULT_GOAL := help
 
+help:
+	@echo "Help command needs to be written";
+
+test:
+	@echo "Test command needs to be written";
+
 install:
 	@sh src/docker-commands.sh install;
 
@@ -13,6 +19,3 @@ stop-mongo-server:
 
 test-make-file:
 	@sh src/docker-commands.sh testMakeCommand;
-
-test-sign:
-	@echo "in here"

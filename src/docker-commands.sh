@@ -3,7 +3,7 @@
 DATA_DIRECTORY="mongodata";
 
 #pull docker image
-install(){
+pullDockerImage(){
   docker pull mongo;
 }
 
@@ -23,6 +23,12 @@ stopMongoServer(){
 
 testMakeCommand(){
   echo 'inside make file';
+}
+
+#pull docker image
+install(){
+  pullDockerImage;
+  createDataDirectory;
 }
 
 "$@"
