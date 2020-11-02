@@ -2,7 +2,6 @@
 
 DATA_DIRECTORY="mongodata";
 
-#pull docker image
 pullDockerImage(){
   docker pull mongo;
 }
@@ -19,10 +18,6 @@ runMongoImage(){
 
 stopMongoServer(){
   docker stop mongodb;
-}
-
-testMakeCommand(){
-  echo 'inside make file';
 }
 
 #pull docker image

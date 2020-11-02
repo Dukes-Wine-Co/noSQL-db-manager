@@ -16,6 +16,3 @@ run-mongo-server:
 
 stop-mongo-server:
 	@sh src/docker-commands.sh stopMongoServer;
-
-test-make-file:
-	@sh src/docker-commands.sh testMakeCommand;
