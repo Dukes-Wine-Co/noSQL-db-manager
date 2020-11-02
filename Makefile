@@ -4,8 +4,8 @@ SHELL := /bin/bash
 help:
 	@echo "Help command needs to be written";
 
-test:
-	@echo "Test command needs to be written";
+tests:
+	@./test/libs/bats/bin/bats test/*.bats;
 
 install:
 	@sh src/docker-commands.sh install;
