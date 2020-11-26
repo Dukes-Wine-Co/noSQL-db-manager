@@ -3,12 +3,29 @@
 load 'libs/bats-support/load'
 load 'libs/bats-assert/load'
 
-@test "creates '/mongodata' directory if it doesn't exist" {
-    local expected_created_dir="/mongodata"
+@test "pullDockerImage: pulls the right mongo image" {
+    local expected_cmd="pull mongo"
     source src/docker-commands.sh;
-    function mkdir() { echo "running mkdir ${*}"; }
-    export -f mkdir
-    run createDataDirectory
-    unset mkdir
-    assert_output -p "running mkdir -p ${expected_created_dir}"
+    function docker() { echo "running docker ${*}"; }
+    export -f docker
+    run pullDockerImage
+    unset docker
+    assert_output -p "running docker ${expected_cmd}"
+
+}
+
+@test "createDataDirectory" {
+  skip
+}
+
+@test "runMongoImage" {
+  skip
+}
+
+@test "stopMongoServer" {
+  skip
+}
+
+@test "install" {
+  skip
 }
