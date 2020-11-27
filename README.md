@@ -20,7 +20,7 @@ You'll need to have the following tools installed on your machine in order to ru
 You can run the mongo server by running `make run-mongo-server`.
 
 # How to run tests
-We're using the Bash Automated Testing System (BATS) to test the bash scripts in this library. Each bats file needs to include the following header. 
+We're using the [Bash Automated Testing System (BATS)](https://github.com/sstephenson/bats) to test the bash scripts in this library. Each bats file needs to include the following header. 
 
 ```bash
 #!/usr/bin/env ./test/libs/bats/bin/bats
